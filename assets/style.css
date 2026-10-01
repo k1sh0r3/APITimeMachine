@@ -1,4 +1,4 @@
-/* API Time Machine — restrained, professional light theme. */
+/* CtrlZ_API — restrained, professional light theme. */
 
 :root {
   --bg: #fafafa;
@@ -7,6 +7,7 @@
   --muted: #6b7280;
   --border: #e5e7eb;
   --accent: #2563eb;
+  --on-accent: #ffffff;
   --green: #16a34a;
   --red: #dc2626;
   --amber: #d97706;
@@ -37,6 +38,11 @@ body {
   letter-spacing: -0.01em;
 }
 .site-header h1 .tick { color: var(--accent); }
+.tagline-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -8px;
+}
 .tagline { margin: 0; color: var(--muted); max-width: 640px; }
 nav { margin-top: 14px; font-size: 0.92rem; }
 nav a { color: var(--accent); text-decoration: none; margin-right: 18px; }
@@ -188,3 +194,12 @@ footer {
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 18px; }
+.chip { border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer; }
+.chip:hover { border-color: var(--accent); }
+.chip.active { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.card-cat { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--muted); margin: -4px 0 8px; }
+.lead { font-size: 1.1rem; font-weight: 500; }

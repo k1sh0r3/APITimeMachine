@@ -1,4 +1,4 @@
-// API Time Machine — shared client helpers (no dependencies).
+// CtrlZ_API — shared client helpers (no dependencies).
 
 async function fetchJSON(path) {
   const res = await fetch(path);

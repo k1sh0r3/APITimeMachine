@@ -1,4 +1,4 @@
-// API Time Machine — schema extraction, canonicalization, and diffing.
+// CtrlZ_API — schema extraction, canonicalization, and diffing.
 // Zero dependencies. Shared by scripts/snapshot.js (Node) via require.
 
 function primitiveType(v) {

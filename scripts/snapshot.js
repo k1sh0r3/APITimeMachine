@@ -1,4 +1,4 @@
-// API Time Machine — daily snapshot runner.
+// CtrlZ_API — daily snapshot runner.
 // Fetches every configured endpoint, extracts its response schema, diffs
 // against the previous snapshot, and records changes. Zero dependencies,
 // Node 18+ (global fetch).
@@ -31,15 +31,16 @@ function hash(s) {
   return crypto.createHash('sha256').update(s).digest('hex').slice(0, 16);
 }
 
-async function fetchJSON(url) {
+async function fetchJSON(url, extraHeaders) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT_MS);
   try {
     const res = await fetch(url, {
       signal: ctrl.signal,
       headers: {
-        'User-Agent': 'api-time-machine/1.0 (daily schema snapshot; github.com)',
-        'Accept': 'application/json'
+        'User-Agent': 'ctrlz-api/1.0 (daily schema snapshot; github.com/k1sh0r3/CtrlZ_API)',
+        'Accept': 'application/json',
+        ...(extraHeaders || {})
       }
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -56,7 +57,7 @@ async function main() {
     process.exit(1);
   }
 
-  const index = { generatedAt: new Date().toISOString(), apis: [] };
+  const index = { generatedAt: new Date().toISOString(), totalApis: config.apis.length, apis: [] };
 
   for (const api of config.apis) {
     console.log(`\n== ${api.id} (${api.name})`);
@@ -71,7 +72,7 @@ async function main() {
       const url = api.baseUrl.replace(/\/$/, '') + ep.path;
       await sleep(DELAY_BETWEEN_REQUESTS_MS);
       try {
-        const body = await fetchJSON(url);
+        const body = await fetchJSON(url, api.headers);
         const schema = extractSchema(body);
         const h = hash(canonicalize(schema));
         endpoints[ep.path] = {
@@ -110,6 +111,7 @@ async function main() {
     index.apis.push({
       id: api.id,
       name: api.name,
+      category: api.category || 'Other',
       description: api.description,
       lastChecked: new Date().toISOString(),
       lastChange: entries.length ? entries[0].date : null,

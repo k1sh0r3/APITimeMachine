@@ -1,1 +1,433 @@
-{"apis":[{"baseUrl":"https://api.github.com","description":"Repository metadata for a fixed public repo (octocat/Hello-World).","endpoints":[{"label":"Get a repository","path":"/repos/octocat/Hello-World"}],"id":"github","name":"GitHub REST API"},{"baseUrl":"https://api.open-meteo.com","description":"Weather forecast for a fixed location (Berlin, DE).","endpoints":[{"label":"Current forecast","path":"/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,weather_code"}],"id":"open-meteo","name":"Open-Meteo"},{"baseUrl":"https://restcountries.com","description":"Country data for a fixed country (USA).","endpoints":[{"label":"Get country by code","path":"/v3.1/alpha/usa"}],"id":"rest-countries","name":"REST Countries"},{"baseUrl":"https://jsonplaceholder.typicode.com","description":"Fake REST API for testing — a single post resource.","endpoints":[{"label":"Get a post","path":"/posts/1"}],"id":"jsonplaceholder","name":"JSONPlaceholder"},{"baseUrl":"https://api.kraken.com","description":"Public crypto market ticker (XBT/USD).","endpoints":[{"label":"Get ticker information","path":"/0/public/Ticker?pair=XBTUSD"}],"id":"kraken","name":"Kraken"},{"baseUrl":"https://dog.ceo","description":"Dog breed list and images.","endpoints":[{"label":"List all breeds","path":"/api/breeds/list/all"}],"id":"dog-ceo","name":"Dog CEO"},{"baseUrl":"https://openlibrary.org","description":"Book/work metadata for a fixed work record.","endpoints":[{"label":"Get a work","path":"/works/OL45883W.json"}],"id":"open-library","name":"Open Library"},{"baseUrl":"https://api.agify.io","description":"Age prediction for a fixed name (michael).","endpoints":[{"label":"Predict age by name","path":"/?name=michael"}],"id":"agify","name":"Agify"}]}
+{
+  "apis": [
+    {
+      "baseUrl": "https://api.open-meteo.com",
+      "category": "Weather",
+      "description": "Weather forecast for a fixed location (Berlin, DE).",
+      "endpoints": [
+        {
+          "label": "Current forecast",
+          "path": "/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,weather_code"
+        }
+      ],
+      "id": "open-meteo",
+      "name": "Open-Meteo"
+    },
+    {
+      "baseUrl": "https://air-quality-api.open-meteo.com",
+      "category": "Weather",
+      "description": "Air quality index for a fixed location (Berlin, DE).",
+      "endpoints": [
+        {
+          "label": "Current air quality",
+          "path": "/v1/air-quality?latitude=52.52&longitude=13.41&current=us_aqi"
+        }
+      ],
+      "id": "open-meteo-air",
+      "name": "Open-Meteo Air Quality"
+    },
+    {
+      "baseUrl": "https://geocoding-api.open-meteo.com",
+      "category": "Weather",
+      "description": "Place search results for a fixed query (Berlin).",
+      "endpoints": [
+        {
+          "label": "Geocode a place",
+          "path": "/v1/search?name=Berlin&count=1"
+        }
+      ],
+      "id": "open-meteo-geo",
+      "name": "Open-Meteo Geocoding"
+    },
+    {
+      "baseUrl": "https://earthquake.usgs.gov",
+      "category": "Weather",
+      "description": "Latest earthquakes from the USGS feed.",
+      "endpoints": [
+        {
+          "label": "Recent earthquakes",
+          "path": "/fdsnws/event/1/query?format=geojson&limit=5&orderby=time"
+        }
+      ],
+      "id": "usgs-quakes",
+      "name": "USGS Earthquakes"
+    },
+    {
+      "baseUrl": "https://api.sunrise-sunset.org",
+      "category": "Weather",
+      "description": "Sunrise/sunset times for a fixed location (Berlin, DE).",
+      "endpoints": [
+        {
+          "label": "Sun times",
+          "path": "/json?lat=52.52&lng=13.41&formatted=0"
+        }
+      ],
+      "id": "sunrise-sunset",
+      "name": "Sunrise-Sunset"
+    },
+    {
+      "baseUrl": "https://api.kraken.com",
+      "category": "Finance",
+      "description": "Public crypto market ticker (XBT/USD).",
+      "endpoints": [
+        {
+          "label": "Get ticker information",
+          "path": "/0/public/Ticker?pair=XBTUSD"
+        }
+      ],
+      "id": "kraken",
+      "name": "Kraken"
+    },
+    {
+      "baseUrl": "https://api.coinbase.com",
+      "category": "Finance",
+      "description": "Spot price of BTC in USD.",
+      "endpoints": [
+        {
+          "label": "Spot price",
+          "path": "/v2/prices/BTC-USD/spot"
+        }
+      ],
+      "id": "coinbase",
+      "name": "Coinbase"
+    },
+    {
+      "baseUrl": "https://api.alternative.me",
+      "category": "Finance",
+      "description": "Crypto Fear & Greed index.",
+      "endpoints": [
+        {
+          "label": "Fear & Greed index",
+          "path": "/fng/"
+        }
+      ],
+      "id": "fear-greed",
+      "name": "Fear & Greed Index"
+    },
+    {
+      "baseUrl": "https://api.frankfurter.app",
+      "category": "Finance",
+      "description": "Foreign exchange rates against USD.",
+      "endpoints": [
+        {
+          "label": "Latest FX rates",
+          "path": "/latest?from=USD"
+        }
+      ],
+      "id": "frankfurter",
+      "name": "Frankfurter FX"
+    },
+    {
+      "baseUrl": "https://open.er-api.com",
+      "category": "Finance",
+      "description": "Exchange rates against USD.",
+      "endpoints": [
+        {
+          "label": "Latest rates",
+          "path": "/v6/latest/USD"
+        }
+      ],
+      "id": "er-api",
+      "name": "ExchangeRate-API"
+    },
+    {
+      "baseUrl": "https://restcountries.com",
+      "category": "Geo",
+      "description": "Country data for a fixed country (USA).",
+      "endpoints": [
+        {
+          "label": "Get country by code",
+          "path": "/v3.1/alpha/usa"
+        }
+      ],
+      "id": "rest-countries",
+      "name": "REST Countries"
+    },
+    {
+      "baseUrl": "https://api.zippopotam.us",
+      "category": "Geo",
+      "description": "Place data for a fixed US zip code (90210).",
+      "endpoints": [
+        {
+          "label": "Lookup zip code",
+          "path": "/us/90210"
+        }
+      ],
+      "id": "zippopotam",
+      "name": "Zippopotam"
+    },
+    {
+      "baseUrl": "https://date.nager.at",
+      "category": "Geo",
+      "description": "Public holidays for the US in 2026.",
+      "endpoints": [
+        {
+          "label": "Public holidays",
+          "path": "/api/v3/publicholidays/2026/US"
+        }
+      ],
+      "id": "nager-holidays",
+      "name": "Nager Public Holidays"
+    },
+    {
+      "baseUrl": "http://ip-api.com",
+      "category": "Geo",
+      "description": "IP geolocation for a fixed IP (8.8.8.8).",
+      "endpoints": [
+        {
+          "label": "Geolocate IP",
+          "path": "/json/8.8.8.8"
+        }
+      ],
+      "id": "ip-api",
+      "name": "IP-API"
+    },
+    {
+      "baseUrl": "https://openlibrary.org",
+      "category": "Books",
+      "description": "Book/work metadata for a fixed work record.",
+      "endpoints": [
+        {
+          "label": "Get a work",
+          "path": "/works/OL45883W.json"
+        }
+      ],
+      "id": "open-library",
+      "name": "Open Library"
+    },
+    {
+      "baseUrl": "https://gutendex.com",
+      "category": "Books",
+      "description": "Project Gutenberg ebook metadata for a fixed book.",
+      "endpoints": [
+        {
+          "label": "Get a book",
+          "path": "/books/?ids=1342"
+        }
+      ],
+      "id": "gutendex",
+      "name": "Gutendex"
+    },
+    {
+      "baseUrl": "https://collectionapi.metmuseum.org",
+      "category": "Art",
+      "description": "Collection record for a fixed Met Museum object.",
+      "endpoints": [
+        {
+          "label": "Get an object",
+          "path": "/public/collection/v1/objects/436535"
+        }
+      ],
+      "id": "met-museum",
+      "name": "Met Museum"
+    },
+    {
+      "baseUrl": "https://api.artic.edu",
+      "category": "Art",
+      "description": "Artwork record for a fixed Art Institute of Chicago piece.",
+      "endpoints": [
+        {
+          "label": "Get an artwork",
+          "path": "/api/v1/artworks/129884"
+        }
+      ],
+      "id": "art-institute",
+      "name": "Art Institute of Chicago"
+    },
+    {
+      "baseUrl": "https://api.github.com",
+      "category": "Dev",
+      "description": "Repository metadata for a fixed public repo (octocat/Hello-World).",
+      "endpoints": [
+        {
+          "label": "Get a repository",
+          "path": "/repos/octocat/Hello-World"
+        }
+      ],
+      "id": "github",
+      "name": "GitHub REST API"
+    },
+    {
+      "baseUrl": "https://registry.npmjs.org",
+      "category": "Dev",
+      "description": "Package metadata for a fixed npm package (express).",
+      "endpoints": [
+        {
+          "label": "Get package version",
+          "path": "/express/latest"
+        }
+      ],
+      "id": "npm",
+      "name": "npm Registry"
+    },
+    {
+      "baseUrl": "https://pypi.org",
+      "category": "Dev",
+      "description": "Package metadata for a fixed PyPI package (requests).",
+      "endpoints": [
+        {
+          "label": "Get package release",
+          "path": "/pypi/requests/json"
+        }
+      ],
+      "id": "pypi",
+      "name": "PyPI"
+    },
+    {
+      "baseUrl": "https://hacker-news.firebaseio.com",
+      "category": "Dev",
+      "description": "A fixed Hacker News item.",
+      "endpoints": [
+        {
+          "label": "Get an item",
+          "path": "/v0/item/8863.json"
+        }
+      ],
+      "id": "hacker-news",
+      "name": "Hacker News"
+    },
+    {
+      "baseUrl": "https://hn.algolia.com",
+      "category": "Dev",
+      "description": "A fixed Hacker News thread via the Algolia search API.",
+      "endpoints": [
+        {
+          "label": "Get an item",
+          "path": "/api/v1/items/8863"
+        }
+      ],
+      "id": "hn-algolia",
+      "name": "HN Algolia API"
+    },
+    {
+      "baseUrl": "https://api.stackexchange.com",
+      "category": "Dev",
+      "description": "Top-voted Stack Overflow question.",
+      "endpoints": [
+        {
+          "label": "Top voted question",
+          "path": "/2.3/questions?site=stackoverflow&order=desc&sort=votes&pagesize=1"
+        }
+      ],
+      "id": "stackexchange",
+      "name": "Stack Exchange"
+    },
+    {
+      "baseUrl": "http://api.open-notify.org",
+      "category": "Space",
+      "description": "Current position of the International Space Station.",
+      "endpoints": [
+        {
+          "label": "ISS position",
+          "path": "/iss-now.json"
+        }
+      ],
+      "id": "open-notify-iss",
+      "name": "Open Notify (ISS)"
+    },
+    {
+      "baseUrl": "http://api.open-notify.org",
+      "category": "Space",
+      "description": "People currently in space.",
+      "endpoints": [
+        {
+          "label": "Astronauts in space",
+          "path": "/astros.json"
+        }
+      ],
+      "id": "open-notify-astros",
+      "name": "Open Notify (Astronauts)"
+    },
+    {
+      "baseUrl": "https://api.jikan.moe",
+      "category": "Media",
+      "description": "A fixed anime entry (Cowboy Bebop).",
+      "endpoints": [
+        {
+          "label": "Get an anime",
+          "path": "/v4/anime/1"
+        }
+      ],
+      "id": "jikan",
+      "name": "Jikan (MyAnimeList)"
+    },
+    {
+      "baseUrl": "https://api.tvmaze.com",
+      "category": "Media",
+      "description": "A fixed TV show.",
+      "endpoints": [
+        {
+          "label": "Get a show",
+          "path": "/shows/1"
+        }
+      ],
+      "id": "tvmaze",
+      "name": "TVMaze"
+    },
+    {
+      "baseUrl": "https://www.themealdb.com",
+      "category": "Food",
+      "description": "Meal search for a fixed query (chicken).",
+      "endpoints": [
+        {
+          "label": "Search meals",
+          "path": "/api/json/v1/1/search.php?s=chicken"
+        }
+      ],
+      "id": "mealdb",
+      "name": "TheMealDB"
+    },
+    {
+      "baseUrl": "https://www.thecocktaildb.com",
+      "category": "Food",
+      "description": "Cocktail search for a fixed query (margarita).",
+      "endpoints": [
+        {
+          "label": "Search cocktails",
+          "path": "/api/json/v1/1/search.php?s=margarita"
+        }
+      ],
+      "id": "cocktaildb",
+      "name": "TheCocktailDB"
+    },
+    {
+      "baseUrl": "https://api.jolpi.ca",
+      "category": "Sports",
+      "description": "Current F1 driver standings.",
+      "endpoints": [
+        {
+          "label": "Driver standings",
+          "path": "/ergast/f1/current/driverStandings/"
+        }
+      ],
+      "id": "jolpica-f1",
+      "name": "Jolpica F1"
+    },
+    {
+      "baseUrl": "http://universities.hipolabs.com",
+      "category": "Reference",
+      "description": "University search for a fixed query.",
+      "endpoints": [
+        {
+          "label": "Search universities",
+          "path": "/search?name=middle"
+        }
+      ],
+      "id": "universities",
+      "name": "Hipolabs Universities"
+    },
+    {
+      "baseUrl": "https://remotive.com",
+      "category": "Jobs",
+      "description": "Remote job listings (one result).",
+      "endpoints": [
+        {
+          "label": "Remote jobs",
+          "path": "/api/remote-jobs?limit=1"
+        }
+      ],
+      "id": "remotive",
+      "name": "Remotive"
+    }
+  ]
+}

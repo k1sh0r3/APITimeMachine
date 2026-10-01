@@ -1,0 +1,190 @@
+{
+  "id": "mealdb",
+  "name": "TheMealDB",
+  "fetchedAt": "2026-10-01T17:29:44.236Z",
+  "endpoints": {
+    "/api/json/v1/1/search.php?s=chicken": {
+      "label": "Search meals",
+      "url": "https://www.themealdb.com/api/json/v1/1/search.php?s=chicken",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:44.236Z",
+      "hash": "801034923edafece",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "meals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "idMeal": {
+                  "type": "string"
+                },
+                "strMeal": {
+                  "type": "string"
+                },
+                "strMealAlternate": {
+                  "type": "null"
+                },
+                "strCategory": {
+                  "type": "string"
+                },
+                "strArea": {
+                  "type": "null|null|string|string|string|string|string|string|string|string|string|string|string|string|string|string"
+                },
+                "strCountry": {
+                  "type": "string"
+                },
+                "strInstructions": {
+                  "type": "string"
+                },
+                "strMealThumb": {
+                  "type": "string"
+                },
+                "strTags": {
+                  "type": "null|null|null|null|null|null|null|null|null|null|null|null|null|string|string|string|string|string|string"
+                },
+                "strYoutube": {
+                  "type": "string"
+                },
+                "strIngredient1": {
+                  "type": "string"
+                },
+                "strIngredient2": {
+                  "type": "string"
+                },
+                "strIngredient3": {
+                  "type": "string"
+                },
+                "strIngredient4": {
+                  "type": "string"
+                },
+                "strIngredient5": {
+                  "type": "string"
+                },
+                "strIngredient6": {
+                  "type": "string"
+                },
+                "strIngredient7": {
+                  "type": "string"
+                },
+                "strIngredient8": {
+                  "type": "string"
+                },
+                "strIngredient9": {
+                  "type": "string"
+                },
+                "strIngredient10": {
+                  "type": "string"
+                },
+                "strIngredient11": {
+                  "type": "string"
+                },
+                "strIngredient12": {
+                  "type": "string"
+                },
+                "strIngredient13": {
+                  "type": "string"
+                },
+                "strIngredient14": {
+                  "type": "string"
+                },
+                "strIngredient15": {
+                  "type": "string"
+                },
+                "strIngredient16": {
+                  "type": "string"
+                },
+                "strIngredient17": {
+                  "type": "string"
+                },
+                "strIngredient18": {
+                  "type": "string"
+                },
+                "strIngredient19": {
+                  "type": "string"
+                },
+                "strIngredient20": {
+                  "type": "string"
+                },
+                "strMeasure1": {
+                  "type": "string"
+                },
+                "strMeasure2": {
+                  "type": "string"
+                },
+                "strMeasure3": {
+                  "type": "string"
+                },
+                "strMeasure4": {
+                  "type": "string"
+                },
+                "strMeasure5": {
+                  "type": "string"
+                },
+                "strMeasure6": {
+                  "type": "string"
+                },
+                "strMeasure7": {
+                  "type": "string"
+                },
+                "strMeasure8": {
+                  "type": "string"
+                },
+                "strMeasure9": {
+                  "type": "string"
+                },
+                "strMeasure10": {
+                  "type": "string"
+                },
+                "strMeasure11": {
+                  "type": "string"
+                },
+                "strMeasure12": {
+                  "type": "string"
+                },
+                "strMeasure13": {
+                  "type": "string"
+                },
+                "strMeasure14": {
+                  "type": "string"
+                },
+                "strMeasure15": {
+                  "type": "string"
+                },
+                "strMeasure16": {
+                  "type": "string"
+                },
+                "strMeasure17": {
+                  "type": "string"
+                },
+                "strMeasure18": {
+                  "type": "string"
+                },
+                "strMeasure19": {
+                  "type": "string"
+                },
+                "strMeasure20": {
+                  "type": "string"
+                },
+                "strSource": {
+                  "type": "string"
+                },
+                "strImageSource": {
+                  "type": "null"
+                },
+                "strCreativeCommonsConfirmed": {
+                  "type": "null"
+                },
+                "dateModified": {
+                  "type": "null|null|null|null|null|null|null|null|null|null|null|null|null|null|string|string|string|string|string|string|string|string|string|string|string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

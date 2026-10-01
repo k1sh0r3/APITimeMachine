@@ -1,0 +1,358 @@
+{
+  "id": "npm",
+  "name": "npm Registry",
+  "fetchedAt": "2026-10-01T17:29:31.424Z",
+  "endpoints": {
+    "/express/latest": {
+      "label": "Get package version",
+      "url": "https://registry.npmjs.org/express/latest",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:31.424Z",
+      "hash": "657c480fc73f80b1",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "bugs": {
+            "type": "object",
+            "fields": {
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "dist": {
+            "type": "object",
+            "fields": {
+              "shasum": {
+                "type": "string"
+              },
+              "tarball": {
+                "type": "string"
+              },
+              "fileCount": {
+                "type": "number"
+              },
+              "integrity": {
+                "type": "string"
+              },
+              "signatures": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "sig": {
+                      "type": "string"
+                    },
+                    "keyid": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "unpackedSize": {
+                "type": "number"
+              }
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "author": {
+            "type": "object",
+            "fields": {
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              }
+            }
+          },
+          "engines": {
+            "type": "object",
+            "fields": {
+              "node": {
+                "type": "string"
+              }
+            }
+          },
+          "funding": {
+            "type": "object",
+            "fields": {
+              "url": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "gitHead": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "scripts": {
+            "type": "object",
+            "fields": {
+              "lint": {
+                "type": "string"
+              },
+              "test": {
+                "type": "string"
+              },
+              "test-ci": {
+                "type": "string"
+              },
+              "lint:fix": {
+                "type": "string"
+              },
+              "test-cov": {
+                "type": "string"
+              },
+              "test-tap": {
+                "type": "string"
+              }
+            }
+          },
+          "_npmUser": {
+            "type": "object",
+            "fields": {
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              }
+            }
+          },
+          "homepage": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "repository": {
+            "type": "object",
+            "fields": {
+              "url": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "_npmVersion": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "directories": {
+            "type": "object",
+            "fields": {}
+          },
+          "maintainers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "_nodeVersion": {
+            "type": "string"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "dependencies": {
+            "type": "object",
+            "fields": {
+              "qs": {
+                "type": "string"
+              },
+              "depd": {
+                "type": "string"
+              },
+              "etag": {
+                "type": "string"
+              },
+              "once": {
+                "type": "string"
+              },
+              "send": {
+                "type": "string"
+              },
+              "vary": {
+                "type": "string"
+              },
+              "debug": {
+                "type": "string"
+              },
+              "fresh": {
+                "type": "string"
+              },
+              "cookie": {
+                "type": "string"
+              },
+              "router": {
+                "type": "string"
+              },
+              "accepts": {
+                "type": "string"
+              },
+              "type-is": {
+                "type": "string"
+              },
+              "parseurl": {
+                "type": "string"
+              },
+              "statuses": {
+                "type": "string"
+              },
+              "encodeurl": {
+                "type": "string"
+              },
+              "mime-types": {
+                "type": "string"
+              },
+              "proxy-addr": {
+                "type": "string"
+              },
+              "body-parser": {
+                "type": "string"
+              },
+              "escape-html": {
+                "type": "string"
+              },
+              "http-errors": {
+                "type": "string"
+              },
+              "on-finished": {
+                "type": "string"
+              },
+              "content-type": {
+                "type": "string"
+              },
+              "finalhandler": {
+                "type": "string"
+              },
+              "range-parser": {
+                "type": "string"
+              },
+              "serve-static": {
+                "type": "string"
+              },
+              "cookie-signature": {
+                "type": "string"
+              },
+              "merge-descriptors": {
+                "type": "string"
+              },
+              "content-disposition": {
+                "type": "string"
+              }
+            }
+          },
+          "_hasShrinkwrap": {
+            "type": "boolean"
+          },
+          "devDependencies": {
+            "type": "object",
+            "fields": {
+              "ejs": {
+                "type": "string"
+              },
+              "hbs": {
+                "type": "string"
+              },
+              "nyc": {
+                "type": "string"
+              },
+              "after": {
+                "type": "string"
+              },
+              "mocha": {
+                "type": "string"
+              },
+              "vhost": {
+                "type": "string"
+              },
+              "eslint": {
+                "type": "string"
+              },
+              "marked": {
+                "type": "string"
+              },
+              "morgan": {
+                "type": "string"
+              },
+              "supertest": {
+                "type": "string"
+              },
+              "connect-redis": {
+                "type": "string"
+              },
+              "cookie-parser": {
+                "type": "string"
+              },
+              "cookie-session": {
+                "type": "string"
+              },
+              "express-session": {
+                "type": "string"
+              },
+              "method-override": {
+                "type": "string"
+              },
+              "pbkdf2-password": {
+                "type": "string"
+              }
+            }
+          },
+          "_npmOperationalInternal": {
+            "type": "object",
+            "fields": {
+              "tmp": {
+                "type": "string"
+              },
+              "host": {
+                "type": "string"
+              }
+            }
+          },
+          "_id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

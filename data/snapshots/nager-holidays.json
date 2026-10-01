@@ -1,0 +1,53 @@
+{
+  "id": "nager-holidays",
+  "name": "Nager Public Holidays",
+  "fetchedAt": "2026-10-01T17:29:20.648Z",
+  "endpoints": {
+    "/api/v3/publicholidays/2026/US": {
+      "label": "Public holidays",
+      "url": "https://date.nager.at/api/v3/publicholidays/2026/US",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:20.648Z",
+      "hash": "d8467fb996d99f6b",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "fields": {
+            "date": {
+              "type": "string"
+            },
+            "localName": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "countryCode": {
+              "type": "string"
+            },
+            "fixed": {
+              "type": "boolean"
+            },
+            "global": {
+              "type": "boolean"
+            },
+            "counties": {
+              "type": "array|array|array|array|array|array|null|null|null|null|null|null|null|null|null|null"
+            },
+            "launchYear": {
+              "type": "null"
+            },
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

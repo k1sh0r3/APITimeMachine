@@ -1,0 +1,111 @@
+{
+  "id": "stackexchange",
+  "name": "Stack Exchange",
+  "fetchedAt": "2026-10-01T17:29:37.206Z",
+  "endpoints": {
+    "/2.3/questions?site=stackoverflow&order=desc&sort=votes&pagesize=1": {
+      "label": "Top voted question",
+      "url": "https://api.stackexchange.com/2.3/questions?site=stackoverflow&order=desc&sort=votes&pagesize=1",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:37.206Z",
+      "hash": "3cd06e85557d9f37",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "owner": {
+                  "type": "object",
+                  "fields": {
+                    "account_id": {
+                      "type": "number"
+                    },
+                    "reputation": {
+                      "type": "number"
+                    },
+                    "user_id": {
+                      "type": "number"
+                    },
+                    "user_type": {
+                      "type": "string"
+                    },
+                    "accept_rate": {
+                      "type": "number"
+                    },
+                    "profile_image": {
+                      "type": "string"
+                    },
+                    "display_name": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "is_answered": {
+                  "type": "boolean"
+                },
+                "view_count": {
+                  "type": "number"
+                },
+                "protected_date": {
+                  "type": "number"
+                },
+                "accepted_answer_id": {
+                  "type": "number"
+                },
+                "answer_count": {
+                  "type": "number"
+                },
+                "score": {
+                  "type": "number"
+                },
+                "last_activity_date": {
+                  "type": "number"
+                },
+                "creation_date": {
+                  "type": "number"
+                },
+                "last_edit_date": {
+                  "type": "number"
+                },
+                "question_id": {
+                  "type": "number"
+                },
+                "content_license": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "has_more": {
+            "type": "boolean"
+          },
+          "quota_max": {
+            "type": "number"
+          },
+          "quota_remaining": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

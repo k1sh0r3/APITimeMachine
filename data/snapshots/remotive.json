@@ -1,0 +1,82 @@
+{
+  "id": "remotive",
+  "name": "Remotive",
+  "fetchedAt": "2026-10-01T17:29:56.068Z",
+  "endpoints": {
+    "/api/remote-jobs?limit=1": {
+      "label": "Remote jobs",
+      "url": "https://remotive.com/api/remote-jobs?limit=1",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:56.068Z",
+      "hash": "18e594d744a8fbe8",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "00-warning": {
+            "type": "string"
+          },
+          "0-legal-notice": {
+            "type": "string"
+          },
+          "job-count": {
+            "type": "number"
+          },
+          "total-job-count": {
+            "type": "number"
+          },
+          "jobs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "id": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "company_name": {
+                  "type": "string"
+                },
+                "company_logo": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string|string|string|string|string|string|string|string|string|string|string|string|string|unknown"
+                  }
+                },
+                "job_type": {
+                  "type": "string"
+                },
+                "publication_date": {
+                  "type": "string"
+                },
+                "candidate_required_location": {
+                  "type": "string"
+                },
+                "salary": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "company_logo_url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

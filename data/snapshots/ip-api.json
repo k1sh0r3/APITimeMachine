@@ -1,0 +1,62 @@
+{
+  "id": "ip-api",
+  "name": "IP-API",
+  "fetchedAt": "2026-10-01T17:29:21.979Z",
+  "endpoints": {
+    "/json/8.8.8.8": {
+      "label": "Geolocate IP",
+      "url": "http://ip-api.com/json/8.8.8.8",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:21.979Z",
+      "hash": "e48d226ff0ecd7ce",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "status": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "countryCode": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "regionName": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lon": {
+            "type": "number"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "isp": {
+            "type": "string"
+          },
+          "org": {
+            "type": "string"
+          },
+          "as": {
+            "type": "string"
+          },
+          "query": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

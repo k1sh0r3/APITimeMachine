@@ -1,0 +1,173 @@
+{
+  "id": "tvmaze",
+  "name": "TVMaze",
+  "fetchedAt": "2026-10-01T17:29:42.765Z",
+  "endpoints": {
+    "/shows/1": {
+      "label": "Get a show",
+      "url": "https://api.tvmaze.com/shows/1",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:42.765Z",
+      "hash": "fbe631d59e8f6379",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "id": {
+            "type": "number"
+          },
+          "url": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "runtime": {
+            "type": "number"
+          },
+          "averageRuntime": {
+            "type": "number"
+          },
+          "premiered": {
+            "type": "string"
+          },
+          "ended": {
+            "type": "string"
+          },
+          "officialSite": {
+            "type": "string"
+          },
+          "schedule": {
+            "type": "object",
+            "fields": {
+              "time": {
+                "type": "string"
+              },
+              "days": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "rating": {
+            "type": "object",
+            "fields": {
+              "average": {
+                "type": "number"
+              }
+            }
+          },
+          "weight": {
+            "type": "number"
+          },
+          "network": {
+            "type": "object",
+            "fields": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "country": {
+                "type": "object",
+                "fields": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "timezone": {
+                    "type": "string"
+                  }
+                }
+              },
+              "officialSite": {
+                "type": "string"
+              }
+            }
+          },
+          "webChannel": {
+            "type": "null"
+          },
+          "dvdCountry": {
+            "type": "null"
+          },
+          "externals": {
+            "type": "object",
+            "fields": {
+              "tvrage": {
+                "type": "number"
+              },
+              "thetvdb": {
+                "type": "number"
+              },
+              "imdb": {
+                "type": "string"
+              }
+            }
+          },
+          "image": {
+            "type": "object",
+            "fields": {
+              "medium": {
+                "type": "string"
+              },
+              "original": {
+                "type": "string"
+              }
+            }
+          },
+          "summary": {
+            "type": "string"
+          },
+          "updated": {
+            "type": "number"
+          },
+          "_links": {
+            "type": "object",
+            "fields": {
+              "self": {
+                "type": "object",
+                "fields": {
+                  "href": {
+                    "type": "string"
+                  }
+                }
+              },
+              "previousepisode": {
+                "type": "object",
+                "fields": {
+                  "href": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

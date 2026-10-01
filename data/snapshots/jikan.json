@@ -1,0 +1,357 @@
+{
+  "id": "jikan",
+  "name": "Jikan (MyAnimeList)",
+  "fetchedAt": "2026-10-01T17:29:41.073Z",
+  "endpoints": {
+    "/v4/anime/1": {
+      "label": "Get an anime",
+      "url": "https://api.jikan.moe/v4/anime/1",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:41.073Z",
+      "hash": "26d2d171b76ce318",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "data": {
+            "type": "object",
+            "fields": {
+              "mal_id": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "images": {
+                "type": "object",
+                "fields": {
+                  "jpg": {
+                    "type": "object",
+                    "fields": {
+                      "image_url": {
+                        "type": "string"
+                      },
+                      "small_image_url": {
+                        "type": "string"
+                      },
+                      "large_image_url": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "webp": {
+                    "type": "object",
+                    "fields": {
+                      "image_url": {
+                        "type": "string"
+                      },
+                      "small_image_url": {
+                        "type": "string"
+                      },
+                      "large_image_url": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "trailer": {
+                "type": "object",
+                "fields": {
+                  "youtube_id": {
+                    "type": "null"
+                  },
+                  "url": {
+                    "type": "null"
+                  },
+                  "embed_url": {
+                    "type": "string"
+                  },
+                  "images": {
+                    "type": "object",
+                    "fields": {
+                      "image_url": {
+                        "type": "null"
+                      },
+                      "small_image_url": {
+                        "type": "null"
+                      },
+                      "medium_image_url": {
+                        "type": "null"
+                      },
+                      "large_image_url": {
+                        "type": "null"
+                      },
+                      "maximum_image_url": {
+                        "type": "null"
+                      }
+                    }
+                  }
+                }
+              },
+              "approved": {
+                "type": "boolean"
+              },
+              "titles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "title": {
+                "type": "string"
+              },
+              "title_english": {
+                "type": "string"
+              },
+              "title_japanese": {
+                "type": "string"
+              },
+              "title_synonyms": {
+                "type": "array",
+                "items": {
+                  "type": "unknown"
+                }
+              },
+              "type": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "episodes": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "airing": {
+                "type": "boolean"
+              },
+              "aired": {
+                "type": "object",
+                "fields": {
+                  "from": {
+                    "type": "string"
+                  },
+                  "to": {
+                    "type": "string"
+                  },
+                  "prop": {
+                    "type": "object",
+                    "fields": {
+                      "from": {
+                        "type": "object",
+                        "fields": {
+                          "day": {
+                            "type": "number"
+                          },
+                          "month": {
+                            "type": "number"
+                          },
+                          "year": {
+                            "type": "number"
+                          }
+                        }
+                      },
+                      "to": {
+                        "type": "object",
+                        "fields": {
+                          "day": {
+                            "type": "number"
+                          },
+                          "month": {
+                            "type": "number"
+                          },
+                          "year": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "string": {
+                    "type": "string"
+                  }
+                }
+              },
+              "duration": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              },
+              "scored_by": {
+                "type": "number"
+              },
+              "rank": {
+                "type": "number"
+              },
+              "popularity": {
+                "type": "number"
+              },
+              "members": {
+                "type": "number"
+              },
+              "favorites": {
+                "type": "number"
+              },
+              "synopsis": {
+                "type": "string"
+              },
+              "background": {
+                "type": "string"
+              },
+              "season": {
+                "type": "string"
+              },
+              "year": {
+                "type": "number"
+              },
+              "broadcast": {
+                "type": "object",
+                "fields": {
+                  "day": {
+                    "type": "string"
+                  },
+                  "time": {
+                    "type": "string"
+                  },
+                  "timezone": {
+                    "type": "string"
+                  },
+                  "string": {
+                    "type": "string"
+                  }
+                }
+              },
+              "producers": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "mal_id": {
+                      "type": "number"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "licensors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "mal_id": {
+                      "type": "number"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "studios": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "mal_id": {
+                      "type": "number"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "genres": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "mal_id": {
+                      "type": "number"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "explicit_genres": {
+                "type": "array",
+                "items": {
+                  "type": "unknown"
+                }
+              },
+              "themes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "mal_id": {
+                      "type": "number"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "demographics": {
+                "type": "array",
+                "items": {
+                  "type": "unknown"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "hn-algolia",
+  "name": "HN Algolia API",
+  "fetchedAt": "2026-10-01T17:29:35.830Z",
+  "endpoints": {
+    "/api/v1/items/8863": {
+      "label": "Get an item",
+      "url": "https://hn.algolia.com/api/v1/items/8863",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:35.829Z",
+      "hash": "f51c10d1e81377a0",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "author": {
+            "type": "string"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "author": {
+                  "type": "string"
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "object|object|object|object|object|object|object|object|object|object|object|object|object|object|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown|unknown"
+                  }
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "created_at_i": {
+                  "type": "number"
+                },
+                "id": {
+                  "type": "number"
+                },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "unknown"
+                  }
+                },
+                "parent_id": {
+                  "type": "number"
+                },
+                "points": {
+                  "type": "null"
+                },
+                "story_id": {
+                  "type": "number"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "null"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "created_at_i": {
+            "type": "number"
+          },
+          "id": {
+            "type": "number"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "unknown"
+            }
+          },
+          "parent_id": {
+            "type": "null"
+          },
+          "points": {
+            "type": "number"
+          },
+          "story_id": {
+            "type": "number"
+          },
+          "text": {
+            "type": "null"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

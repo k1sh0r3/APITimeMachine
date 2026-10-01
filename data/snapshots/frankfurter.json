@@ -1,0 +1,121 @@
+{
+  "id": "frankfurter",
+  "name": "Frankfurter FX",
+  "fetchedAt": "2026-10-01T17:29:15.004Z",
+  "endpoints": {
+    "/latest?from=USD": {
+      "label": "Latest FX rates",
+      "url": "https://api.frankfurter.app/latest?from=USD",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:15.004Z",
+      "hash": "d669bece0e945bf3",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "amount": {
+            "type": "number"
+          },
+          "base": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "rates": {
+            "type": "object",
+            "fields": {
+              "AUD": {
+                "type": "number"
+              },
+              "BRL": {
+                "type": "number"
+              },
+              "CAD": {
+                "type": "number"
+              },
+              "CHF": {
+                "type": "number"
+              },
+              "CNY": {
+                "type": "number"
+              },
+              "CZK": {
+                "type": "number"
+              },
+              "DKK": {
+                "type": "number"
+              },
+              "EUR": {
+                "type": "number"
+              },
+              "GBP": {
+                "type": "number"
+              },
+              "HKD": {
+                "type": "number"
+              },
+              "HUF": {
+                "type": "number"
+              },
+              "IDR": {
+                "type": "number"
+              },
+              "ILS": {
+                "type": "number"
+              },
+              "INR": {
+                "type": "number"
+              },
+              "ISK": {
+                "type": "number"
+              },
+              "JPY": {
+                "type": "number"
+              },
+              "KRW": {
+                "type": "number"
+              },
+              "MXN": {
+                "type": "number"
+              },
+              "MYR": {
+                "type": "number"
+              },
+              "NOK": {
+                "type": "number"
+              },
+              "NZD": {
+                "type": "number"
+              },
+              "PHP": {
+                "type": "number"
+              },
+              "PLN": {
+                "type": "number"
+              },
+              "RON": {
+                "type": "number"
+              },
+              "SEK": {
+                "type": "number"
+              },
+              "SGD": {
+                "type": "number"
+              },
+              "THB": {
+                "type": "number"
+              },
+              "TRY": {
+                "type": "number"
+              },
+              "ZAR": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

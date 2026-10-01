@@ -1,15 +1,15 @@
 {
-  "id": "open-meteo",
-  "name": "Open-Meteo",
-  "fetchedAt": "2026-10-01T17:29:02.957Z",
+  "id": "open-meteo-air",
+  "name": "Open-Meteo Air Quality",
+  "fetchedAt": "2026-10-01T17:29:04.612Z",
   "endpoints": {
-    "/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,weather_code": {
-      "label": "Current forecast",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,weather_code",
+    "/v1/air-quality?latitude=52.52&longitude=13.41&current=us_aqi": {
+      "label": "Current air quality",
+      "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=52.52&longitude=13.41&current=us_aqi",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-01T17:29:02.957Z",
-      "hash": "8d3268b05ede0343",
+      "fetchedAt": "2026-10-01T17:29:04.612Z",
+      "hash": "fa15835f20c247e8",
       "schema": {
         "type": "object",
         "fields": {
@@ -43,13 +43,7 @@
               "interval": {
                 "type": "string"
               },
-              "temperature_2m": {
-                "type": "string"
-              },
-              "relative_humidity_2m": {
-                "type": "string"
-              },
-              "weather_code": {
+              "us_aqi": {
                 "type": "string"
               }
             }
@@ -63,13 +57,7 @@
               "interval": {
                 "type": "number"
               },
-              "temperature_2m": {
-                "type": "number"
-              },
-              "relative_humidity_2m": {
-                "type": "number"
-              },
-              "weather_code": {
+              "us_aqi": {
                 "type": "number"
               }
             }

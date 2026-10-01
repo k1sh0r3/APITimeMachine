@@ -1,0 +1,50 @@
+{
+  "id": "hacker-news",
+  "name": "Hacker News",
+  "fetchedAt": "2026-10-01T17:29:34.046Z",
+  "endpoints": {
+    "/v0/item/8863.json": {
+      "label": "Get an item",
+      "url": "https://hacker-news.firebaseio.com/v0/item/8863.json",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:34.046Z",
+      "hash": "e64b73c793255b8f",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "by": {
+            "type": "string"
+          },
+          "descendants": {
+            "type": "number"
+          },
+          "id": {
+            "type": "number"
+          },
+          "kids": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "score": {
+            "type": "number"
+          },
+          "time": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

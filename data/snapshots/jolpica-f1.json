@@ -1,0 +1,137 @@
+{
+  "id": "jolpica-f1",
+  "name": "Jolpica F1",
+  "fetchedAt": "2026-10-01T17:29:53.404Z",
+  "endpoints": {
+    "/ergast/f1/current/driverStandings/": {
+      "label": "Driver standings",
+      "url": "https://api.jolpi.ca/ergast/f1/current/driverStandings/",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:53.404Z",
+      "hash": "f10dcc08e34f2109",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "MRData": {
+            "type": "object",
+            "fields": {
+              "xmlns": {
+                "type": "string"
+              },
+              "series": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "limit": {
+                "type": "string"
+              },
+              "offset": {
+                "type": "string"
+              },
+              "total": {
+                "type": "string"
+              },
+              "StandingsTable": {
+                "type": "object",
+                "fields": {
+                  "season": {
+                    "type": "string"
+                  },
+                  "round": {
+                    "type": "string"
+                  },
+                  "StandingsLists": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "fields": {
+                        "season": {
+                          "type": "string"
+                        },
+                        "round": {
+                          "type": "string"
+                        },
+                        "DriverStandings": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "fields": {
+                              "position": {
+                                "type": "string"
+                              },
+                              "positionText": {
+                                "type": "string"
+                              },
+                              "points": {
+                                "type": "string"
+                              },
+                              "wins": {
+                                "type": "string"
+                              },
+                              "Driver": {
+                                "type": "object",
+                                "fields": {
+                                  "driverId": {
+                                    "type": "string"
+                                  },
+                                  "permanentNumber": {
+                                    "type": "string"
+                                  },
+                                  "code": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "givenName": {
+                                    "type": "string"
+                                  },
+                                  "familyName": {
+                                    "type": "string"
+                                  },
+                                  "dateOfBirth": {
+                                    "type": "string"
+                                  },
+                                  "nationality": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "Constructors": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "fields": {
+                                    "constructorId": {
+                                      "type": "string"
+                                    },
+                                    "url": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "nationality": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

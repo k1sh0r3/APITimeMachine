@@ -1,0 +1,166 @@
+{
+  "id": "usgs-quakes",
+  "name": "USGS Earthquakes",
+  "fetchedAt": "2026-10-01T17:29:08.032Z",
+  "endpoints": {
+    "/fdsnws/event/1/query?format=geojson&limit=5&orderby=time": {
+      "label": "Recent earthquakes",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&limit=5&orderby=time",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:08.032Z",
+      "hash": "0ba947f1cd9bef37",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "type": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "fields": {
+              "generated": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "status": {
+                "type": "number"
+              },
+              "api": {
+                "type": "string"
+              },
+              "limit": {
+                "type": "number"
+              },
+              "offset": {
+                "type": "number"
+              }
+            }
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "type": {
+                  "type": "string"
+                },
+                "properties": {
+                  "type": "object",
+                  "fields": {
+                    "mag": {
+                      "type": "number"
+                    },
+                    "place": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "number"
+                    },
+                    "updated": {
+                      "type": "number"
+                    },
+                    "tz": {
+                      "type": "null"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "detail": {
+                      "type": "string"
+                    },
+                    "felt": {
+                      "type": "null"
+                    },
+                    "cdi": {
+                      "type": "null"
+                    },
+                    "mmi": {
+                      "type": "null"
+                    },
+                    "alert": {
+                      "type": "null"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "tsunami": {
+                      "type": "number"
+                    },
+                    "sig": {
+                      "type": "number"
+                    },
+                    "net": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "ids": {
+                      "type": "string"
+                    },
+                    "sources": {
+                      "type": "string"
+                    },
+                    "types": {
+                      "type": "string"
+                    },
+                    "nst": {
+                      "type": "number"
+                    },
+                    "dmin": {
+                      "type": "number"
+                    },
+                    "rms": {
+                      "type": "number"
+                    },
+                    "gap": {
+                      "type": "number"
+                    },
+                    "magType": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "geometry": {
+                  "type": "object",
+                  "fields": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "coordinates": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "bbox": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}

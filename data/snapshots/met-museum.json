@@ -1,0 +1,253 @@
+{
+  "id": "met-museum",
+  "name": "Met Museum",
+  "fetchedAt": "2026-10-01T17:29:27.064Z",
+  "endpoints": {
+    "/public/collection/v1/objects/436535": {
+      "label": "Get an object",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436535",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:27.064Z",
+      "hash": "d7a7824d65b3fc8d",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "objectID": {
+            "type": "number"
+          },
+          "isHighlight": {
+            "type": "boolean"
+          },
+          "accessionNumber": {
+            "type": "string"
+          },
+          "accessionYear": {
+            "type": "string"
+          },
+          "isPublicDomain": {
+            "type": "boolean"
+          },
+          "primaryImage": {
+            "type": "string"
+          },
+          "primaryImageSmall": {
+            "type": "string"
+          },
+          "additionalImages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "constituents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "constituentID": {
+                  "type": "number"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "constituentULAN_URL": {
+                  "type": "string"
+                },
+                "constituentWikidata_URL": {
+                  "type": "string"
+                },
+                "gender": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "department": {
+            "type": "string"
+          },
+          "objectName": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "culture": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "dynasty": {
+            "type": "string"
+          },
+          "reign": {
+            "type": "string"
+          },
+          "portfolio": {
+            "type": "string"
+          },
+          "artistRole": {
+            "type": "string"
+          },
+          "artistPrefix": {
+            "type": "string"
+          },
+          "artistDisplayName": {
+            "type": "string"
+          },
+          "artistDisplayBio": {
+            "type": "string"
+          },
+          "artistSuffix": {
+            "type": "string"
+          },
+          "artistAlphaSort": {
+            "type": "string"
+          },
+          "artistNationality": {
+            "type": "string"
+          },
+          "artistBeginDate": {
+            "type": "string"
+          },
+          "artistEndDate": {
+            "type": "string"
+          },
+          "artistGender": {
+            "type": "string"
+          },
+          "artistWikidata_URL": {
+            "type": "string"
+          },
+          "artistULAN_URL": {
+            "type": "string"
+          },
+          "objectDate": {
+            "type": "string"
+          },
+          "objectBeginDate": {
+            "type": "number"
+          },
+          "objectEndDate": {
+            "type": "number"
+          },
+          "medium": {
+            "type": "string"
+          },
+          "dimensions": {
+            "type": "string"
+          },
+          "measurements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "elementName": {
+                  "type": "string"
+                },
+                "elementDescription": {
+                  "type": "null|string"
+                },
+                "elementMeasurements": {
+                  "type": "object",
+                  "fields": {
+                    "Height": {
+                      "type": "number"
+                    },
+                    "Width": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "creditLine": {
+            "type": "string"
+          },
+          "geographyType": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "county": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "subregion": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "locus": {
+            "type": "string"
+          },
+          "excavation": {
+            "type": "string"
+          },
+          "river": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string"
+          },
+          "rightsAndReproduction": {
+            "type": "string"
+          },
+          "linkResource": {
+            "type": "string"
+          },
+          "metadataDate": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "objectURL": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "term": {
+                  "type": "string"
+                },
+                "AAT_URL": {
+                  "type": "string"
+                },
+                "Wikidata_URL": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "objectWikidata_URL": {
+            "type": "string"
+          },
+          "isTimelineWork": {
+            "type": "boolean"
+          },
+          "GalleryNumber": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

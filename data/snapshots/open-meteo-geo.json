@@ -1,0 +1,88 @@
+{
+  "id": "open-meteo-geo",
+  "name": "Open-Meteo Geocoding",
+  "fetchedAt": "2026-10-01T17:29:06.469Z",
+  "endpoints": {
+    "/v1/search?name=Berlin&count=1": {
+      "label": "Geocode a place",
+      "url": "https://geocoding-api.open-meteo.com/v1/search?name=Berlin&count=1",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:06.469Z",
+      "hash": "65661c04d8d40553",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "elevation": {
+                  "type": "number"
+                },
+                "feature_code": {
+                  "type": "string"
+                },
+                "country_code": {
+                  "type": "string"
+                },
+                "admin1_id": {
+                  "type": "number"
+                },
+                "admin3_id": {
+                  "type": "number"
+                },
+                "admin4_id": {
+                  "type": "number"
+                },
+                "timezone": {
+                  "type": "string"
+                },
+                "population": {
+                  "type": "number"
+                },
+                "postcodes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "country_id": {
+                  "type": "number"
+                },
+                "country": {
+                  "type": "string"
+                },
+                "admin1": {
+                  "type": "string"
+                },
+                "admin3": {
+                  "type": "string"
+                },
+                "admin4": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "generationtime_ms": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

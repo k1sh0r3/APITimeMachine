@@ -1,14 +1,14 @@
 {
   "id": "open-library",
   "name": "Open Library",
-  "fetchedAt": "2026-10-01T17:02:33.682Z",
+  "fetchedAt": "2026-10-01T17:29:23.517Z",
   "endpoints": {
     "/works/OL45883W.json": {
       "label": "Get a work",
       "url": "https://openlibrary.org/works/OL45883W.json",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-01T17:02:33.681Z",
+      "fetchedAt": "2026-10-01T17:29:23.517Z",
       "hash": "e9d1b623934c5326",
       "schema": {
         "type": "object",

@@ -1,0 +1,131 @@
+{
+  "id": "gutendex",
+  "name": "Gutendex",
+  "fetchedAt": "2026-10-01T17:29:24.896Z",
+  "endpoints": {
+    "/books/?ids=1342": {
+      "label": "Get a book",
+      "url": "https://gutendex.com/books/?ids=1342",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:24.896Z",
+      "hash": "283d30a0ffd3098a",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "count": {
+            "type": "number"
+          },
+          "next": {
+            "type": "null"
+          },
+          "previous": {
+            "type": "null"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "id": {
+                  "type": "number"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "authors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "fields": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "birth_year": {
+                        "type": "number"
+                      },
+                      "death_year": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "summaries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "editors": {
+                  "type": "array",
+                  "items": {
+                    "type": "unknown"
+                  }
+                },
+                "translators": {
+                  "type": "array",
+                  "items": {
+                    "type": "unknown"
+                  }
+                },
+                "subjects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "bookshelves": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "languages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "copyright": {
+                  "type": "boolean"
+                },
+                "media_type": {
+                  "type": "string"
+                },
+                "formats": {
+                  "type": "object",
+                  "fields": {
+                    "text/html": {
+                      "type": "string"
+                    },
+                    "application/epub+zip": {
+                      "type": "string"
+                    },
+                    "application/x-mobipocket-ebook": {
+                      "type": "string"
+                    },
+                    "application/rdf+xml": {
+                      "type": "string"
+                    },
+                    "image/jpeg": {
+                      "type": "string"
+                    },
+                    "application/octet-stream": {
+                      "type": "string"
+                    },
+                    "text/plain; charset=utf-8": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "download_count": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "open-meteo",
+  "name": "Open-Meteo",
+  "fetchedAt": "2026-10-01T17:02:23.770Z",
+  "endpoints": {
+    "/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,weather_code": {
+      "label": "Current forecast",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,weather_code",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:02:23.768Z",
+      "hash": "8d3268b05ede0343",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "generationtime_ms": {
+            "type": "number"
+          },
+          "utc_offset_seconds": {
+            "type": "number"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "timezone_abbreviation": {
+            "type": "string"
+          },
+          "elevation": {
+            "type": "number"
+          },
+          "current_units": {
+            "type": "object",
+            "fields": {
+              "time": {
+                "type": "string"
+              },
+              "interval": {
+                "type": "string"
+              },
+              "temperature_2m": {
+                "type": "string"
+              },
+              "relative_humidity_2m": {
+                "type": "string"
+              },
+              "weather_code": {
+                "type": "string"
+              }
+            }
+          },
+          "current": {
+            "type": "object",
+            "fields": {
+              "time": {
+                "type": "string"
+              },
+              "interval": {
+                "type": "number"
+              },
+              "temperature_2m": {
+                "type": "number"
+              },
+              "relative_humidity_2m": {
+                "type": "number"
+              },
+              "weather_code": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

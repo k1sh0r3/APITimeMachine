@@ -1,0 +1,62 @@
+{
+  "id": "open-library",
+  "name": "Open Library",
+  "fetchedAt": "2026-10-01T17:02:33.682Z",
+  "endpoints": {
+    "/works/OL45883W.json": {
+      "label": "Get a work",
+      "url": "https://openlibrary.org/works/OL45883W.json",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:02:33.681Z",
+      "hash": "e9d1b623934c5326",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "location": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "type": {
+            "type": "object",
+            "fields": {
+              "key": {
+                "type": "string"
+              }
+            }
+          },
+          "latest_revision": {
+            "type": "number"
+          },
+          "revision": {
+            "type": "number"
+          },
+          "created": {
+            "type": "object",
+            "fields": {
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "last_modified": {
+            "type": "object",
+            "fields": {
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

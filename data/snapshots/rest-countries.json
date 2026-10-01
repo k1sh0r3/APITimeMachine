@@ -1,0 +1,37 @@
+{
+  "id": "rest-countries",
+  "name": "REST Countries",
+  "fetchedAt": "2026-10-01T17:02:26.140Z",
+  "endpoints": {
+    "/v3.1/alpha/usa": {
+      "label": "Get country by code",
+      "url": "https://restcountries.com/v3.1/alpha/usa",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:02:26.140Z",
+      "hash": "16b563b51c29ff8a",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "null"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 A public archive that snapshots popular free APIs every day and records exactly what changed in their response schemas — and when.
 
-**Live site:** *(GitHub Pages URL goes here after the parent pushes)*
+**Live site:** https://k1sh0r3.github.io/APITimeMachine/
 
 ## Why
 

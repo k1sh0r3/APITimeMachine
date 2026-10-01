@@ -1,8 +1,11 @@
-# API Time Machine ⏱
+# CtrlZ_API ⏱
+
+**Live site:** https://k1sh0r3.github.io/CtrlZ_API/
+**Repo:** https://github.com/k1sh0r3/CtrlZ_API
+
+*Ctrl+Z for the API economy — every schema change, archived.*
 
 A public archive that snapshots popular free APIs every day and records exactly what changed in their response schemas — and when.
-
-**Live site:** https://k1sh0r3.github.io/APITimeMachine/
 
 ## Why
 
@@ -14,7 +17,8 @@ APIs change silently. A field gets renamed, a type flips from number to string, 
 .github/workflows/snapshot.yml   daily 06:00 UTC cron
         │
         ▼
-scripts/snapshot.js ──► fetches each endpoint (sequential, 1s delay, 15s timeout)
+scripts/snapshot.js ──► fetches each endpoint (sequential, 1s delay, 15s timeout,
+                         per-API headers from config/apis.json)
         │
         ▼
 scripts/schema.js ──► extractSchema() → canonicalize() → hash → diffSchemas()
@@ -23,7 +27,7 @@ scripts/schema.js ──► extractSchema() → canonicalize() → hash → diff
 data/
   snapshots/<api>.json    latest full schema tree per API
   changelog/<api>.json    reverse-chronological {date, endpoint, changes[]}
-  index.json              dashboard feed: status, lastChange, changeCount
+  index.json              dashboard feed: category, status, lastChange, changeCount, totalApis
         │
         ▼
 index.html / api.html / about.html   static site, reads data/*.json directly
@@ -31,18 +35,22 @@ index.html / api.html / about.html   static site, reads data/*.json directly
 
 Zero npm dependencies. Zero API keys. The site is pure static HTML/CSS/JS — GitHub Pages serves the repo root.
 
-## Tracked APIs (all keyless)
+## Tracked APIs (33, all keyless and production-grade)
 
-| API | Endpoint snapshotted |
+| Category | APIs |
 |---|---|
-| GitHub REST API | `GET /repos/octocat/Hello-World` |
-| Open-Meteo | Forecast for Berlin, DE |
-| REST Countries | `GET /v3.1/alpha/usa` |
-| JSONPlaceholder | `GET /posts/1` |
-| Kraken | `GET /0/public/Ticker?pair=XBTUSD` |
-| Dog CEO | `GET /api/breeds/list/all` |
-| Open Library | `GET /works/OL45883W.json` |
-| Agify | `GET /?name=michael` |
+| Weather | Open-Meteo, Open-Meteo Air Quality, Open-Meteo Geocoding, USGS Earthquakes, Sunrise-Sunset |
+| Finance | Kraken, Coinbase, Fear & Greed Index, Frankfurter FX, ExchangeRate-API |
+| Geo | REST Countries, Zippopotam, Nager Public Holidays, IP-API |
+| Books | Open Library, Gutendex |
+| Art | Met Museum, Art Institute of Chicago |
+| Dev | GitHub REST API, npm Registry, PyPI, Hacker News, HN Algolia API, Stack Exchange |
+| Space | Open Notify (ISS), Open Notify (Astronauts) |
+| Reference | Hipolabs Universities |
+| Media | TVMaze, Jikan (MyAnimeList) |
+| Food | TheMealDB, TheCocktailDB |
+| Sports | Jolpica F1 |
+| Jobs | Remotive |
 
 ## Local dev
 
@@ -53,8 +61,20 @@ python3 -m http.server     # preview the site at localhost:8000
 
 ## Add your own API
 
-1. Add an entry to `config/apis.json` (see `about.html` for the exact shape).
+1. Add an entry to `config/apis.json`:
+   ```json
+   {
+     "id": "my-api",
+     "name": "My API",
+     "category": "Reference",
+     "description": "What this API does.",
+     "baseUrl": "https://api.example.com",
+     "headers": { "Accept": "application/json" },
+     "endpoints": [{ "path": "/v1/things", "label": "List things" }]
+   }
+   ```
+   `category` groups the API on the dashboard; `headers` is optional, only needed when an endpoint requires a special request header.
 2. Run `node scripts/snapshot.js` to seed the snapshot.
 3. Commit — the scheduled workflow picks it up from there.
 
-Rules: no API key required, endpoint must be stable (same input daily), JSON responses under ~1MB.
+Rules: no API key required, endpoint must be stable (same input daily), JSON responses under ~1MB. Only production-grade, genuinely useful APIs — no mock data, jokes, or fandom APIs.

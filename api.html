@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>API detail — API Time Machine</title>
+<title>API detail — CtrlZ_API</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <h1>API Time Machine <span class="tick">⏱</span></h1>
+    <h1>CtrlZ_API <span class="tick">⏱</span></h1>
     <nav><a href="index.html">← Dashboard</a><a href="about.html">How it works</a></nav>
   </div>
 </header>
@@ -47,10 +47,11 @@
     ]);
     const meta = index.apis.find(a => a.id === id);
     if (!meta) throw new Error('Unknown API id: ' + id);
-    document.title = meta.name + ' — API Time Machine';
+    document.title = meta.name + ' — CtrlZ_API';
 
     head.innerHTML = `
       <h1>${ATM.esc(meta.name)}</h1>
+      <p><span class="card-cat">${ATM.esc(meta.category || 'Other')}</span></p>
       <p>${ATM.esc(meta.description || '')}</p>
       <div class="api-stats">
         <span>Status <strong>${ATM.esc(meta.status)}</strong></span>

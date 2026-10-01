@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>API Time Machine — public archive of API schema changes</title>
+<title>CtrlZ_API — public archive of API schema changes</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <h1>API Time Machine <span class="tick">⏱</span></h1>
+    <h1>CtrlZ_API <span class="tick">⏱</span></h1>
     <p class="tagline">A public archive that snapshots popular free APIs every day and records exactly what changed in their response schemas — and when.</p>
+    <p class="tagline-sub">Ctrl+Z for the API economy — every schema change, archived.</p>
     <nav><a href="index.html">Dashboard</a><a href="about.html">How it works</a></nav>
   </div>
 </header>
 
 <main class="wrap">
+  <div class="chips" id="chips"></div>
   <div class="grid" id="cards"><p class="updated">Loading…</p></div>
   <p class="updated" id="generated"></p>
 </main>
@@ -30,21 +32,44 @@
   try {
     const index = await ATM.fetchJSON('data/index.json');
     const grid = document.getElementById('cards');
-    grid.innerHTML = index.apis.map(a => `
+    const chipsEl = document.getElementById('chips');
+    let active = 'All';
+    const cats = ['All', ...new Set(index.apis.map(a => a.category || 'Other'))];
+
+    function card(a) {
+      return `
       <a class="card" href="api.html?api=${encodeURIComponent(a.id)}">
         <div class="card-top">
           <span class="dot ${a.status === 'ok' ? 'ok' : 'error'}" title="${ATM.esc(a.status)}"></span>
           <h2>${ATM.esc(a.name)}</h2>
         </div>
+        <p class="card-cat">${ATM.esc(a.category || 'Other')}</p>
         <p>${ATM.esc(a.description || '')}</p>
         <div class="card-meta">
           <span>Last change<br><strong>${a.lastChange ? ATM.esc(a.lastChange) : 'none yet'}</strong></span>
           <span>Changes<br><strong>${a.changeCount}</strong></span>
           <span>Checked<br><strong>${ATM.fmtDate(a.lastChecked)}</strong></span>
         </div>
-      </a>`).join('');
+      </a>`;
+    }
+
+    function render() {
+      const list = active === 'All'
+        ? index.apis
+        : index.apis.filter(a => (a.category || 'Other') === active);
+      grid.innerHTML = list.map(card).join('') ||
+        '<p class="updated">No APIs in this category.</p>';
+      chipsEl.innerHTML = cats.map(c =>
+        `<button class="chip${c === active ? ' active' : ''}" data-cat="${ATM.esc(c)}">${ATM.esc(c)}</button>`
+      ).join('');
+      chipsEl.querySelectorAll('.chip').forEach(b =>
+        b.addEventListener('click', () => { active = b.dataset.cat; render(); }));
+    }
+
+    render();
     document.getElementById('generated').textContent =
-      'Index generated ' + new Date(index.generatedAt).toLocaleString();
+      'Index generated ' + new Date(index.generatedAt).toLocaleString() +
+      ` · tracking ${index.totalApis || index.apis.length} APIs`;
   } catch (e) {
     document.getElementById('cards').innerHTML =
       '<p class="updated">Could not load snapshot data. ' + ATM.esc(e.message) + '</p>';

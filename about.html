@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How it works — API Time Machine</title>
+<title>How it works — CtrlZ_API</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <h1>API Time Machine <span class="tick">⏱</span></h1>
+    <h1>CtrlZ_API <span class="tick">⏱</span></h1>
     <nav><a href="index.html">Dashboard</a><a href="about.html">How it works</a></nav>
   </div>
 </header>
@@ -17,7 +17,8 @@
 <main class="wrap">
   <div class="prose">
     <h2>What it is</h2>
-    <p>APIs change silently. A field gets renamed, a type flips from number to string, a nested object disappears — and your integration breaks at 2am. API Time Machine is a public, version-controlled archive of what popular free APIs <em>actually return</em>, snapshotted every day, with a field-level changelog of every structural change.</p>
+    <p class="lead">A public archive that snapshots popular free APIs every day and records exactly what changed in their response schemas — and when.</p>
+    <p>APIs change silently. A field gets renamed, a type flips from number to string, a nested object disappears — and your integration breaks at 2am. CtrlZ_API is a public, version-controlled archive of what popular free APIs <em>actually return</em>, snapshotted every day, with a field-level changelog of every structural change.</p>
 
     <h2>How the pipeline works</h2>
     <ol>
@@ -29,15 +30,20 @@
     <p>If a fetch fails, the previous snapshot is kept untouched and the API is marked <code>error</code> until the next successful run.</p>
 
     <h2>APIs currently tracked</h2>
+    <p>CtrlZ_API tracks <strong>33 production-grade, keyless APIs</strong> across 12 categories:</p>
     <ul>
-      <li><strong>GitHub REST API</strong> — repository metadata for a fixed public repo</li>
-      <li><strong>Open-Meteo</strong> — weather forecast for a fixed location</li>
-      <li><strong>REST Countries</strong> — country data for a fixed country</li>
-      <li><strong>JSONPlaceholder</strong> — a single fake post resource</li>
-      <li><strong>Kraken</strong> — public crypto ticker (XBT/USD)</li>
-      <li><strong>Dog CEO</strong> — the full dog breed list</li>
-      <li><strong>Open Library</strong> — metadata for a fixed work record</li>
-      <li><strong>Agify</strong> — age prediction for a fixed name</li>
+      <li><strong>Weather</strong> — Open-Meteo, Open-Meteo Air Quality, Open-Meteo Geocoding, USGS Earthquakes, Sunrise-Sunset</li>
+      <li><strong>Finance</strong> — Kraken, Coinbase, Fear &amp; Greed Index, Frankfurter FX, ExchangeRate-API</li>
+      <li><strong>Geo</strong> — REST Countries, Zippopotam, Nager Public Holidays, IP-API</li>
+      <li><strong>Books</strong> — Open Library, Gutendex</li>
+      <li><strong>Art</strong> — Met Museum, Art Institute of Chicago</li>
+      <li><strong>Dev</strong> — GitHub REST API, npm Registry, PyPI, Hacker News, HN Algolia API, Stack Exchange</li>
+      <li><strong>Space</strong> — Open Notify (ISS), Open Notify (Astronauts)</li>
+      <li><strong>Reference</strong> — Hipolabs Universities</li>
+      <li><strong>Media</strong> — TVMaze, Jikan (MyAnimeList)</li>
+      <li><strong>Food</strong> — TheMealDB, TheCocktailDB</li>
+      <li><strong>Sports</strong> — Jolpica F1</li>
+      <li><strong>Jobs</strong> — Remotive</li>
     </ul>
     <p>All are keyless and free. Endpoints are fixed (not parameterized per run) so day-to-day diffs reflect real API changes, not different inputs.</p>
 
@@ -47,8 +53,10 @@
         <pre>{
   "id": "my-api",
   "name": "My API",
+  "category": "Reference",
   "description": "What this API does.",
   "baseUrl": "https://api.example.com",
+  "headers": { "Accept": "application/json" },
   "endpoints": [
     { "path": "/v1/things", "label": "List things" }
   ]
@@ -57,7 +65,7 @@
       <li>Run <code>node scripts/snapshot.js</code> locally to create the seed snapshot.</li>
       <li>Commit. The next scheduled run picks it up automatically.</li>
     </ol>
-    <p>Rules: the API must need no key, the endpoint must be stable (same input every day), and responses should be JSON under ~1MB.</p>
+    <p>Rules: the API must need no key, the endpoint must be stable (same input every day), and responses should be JSON under ~1MB. <code>category</code> groups the API on the dashboard; <code>headers</code> is optional and only needed when an endpoint requires a special request header (e.g. <code>Accept: application/json</code>).</p>
 
     <h2>Local development</h2>
     <p>No build step, no dependencies. To refresh the data: <code>node scripts/snapshot.js</code> (Node 18+). To preview the site: serve the repo root with any static server, e.g. <code>npx serve .</code> or <code>python3 -m http.server</code>, then open <code>index.html</code>.</p>

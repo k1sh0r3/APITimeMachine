@@ -1,0 +1,181 @@
+{
+  "id": "cocktaildb",
+  "name": "TheCocktailDB",
+  "fetchedAt": "2026-10-01T17:29:52.159Z",
+  "endpoints": {
+    "/api/json/v1/1/search.php?s=margarita": {
+      "label": "Search cocktails",
+      "url": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita",
+      "status": "ok",
+      "httpStatus": 200,
+      "fetchedAt": "2026-10-01T17:29:52.159Z",
+      "hash": "d016d8fbe64bc515",
+      "schema": {
+        "type": "object",
+        "fields": {
+          "drinks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "idDrink": {
+                  "type": "string"
+                },
+                "strDrink": {
+                  "type": "string"
+                },
+                "strDrinkAlternate": {
+                  "type": "null"
+                },
+                "strTags": {
+                  "type": "null|null|null|null|string|string"
+                },
+                "strVideo": {
+                  "type": "null"
+                },
+                "strCategory": {
+                  "type": "string"
+                },
+                "strIBA": {
+                  "type": "null|null|null|null|string|string"
+                },
+                "strAlcoholic": {
+                  "type": "string"
+                },
+                "strGlass": {
+                  "type": "string"
+                },
+                "strInstructions": {
+                  "type": "string"
+                },
+                "strInstructionsES": {
+                  "type": "string"
+                },
+                "strInstructionsDE": {
+                  "type": "null|string"
+                },
+                "strInstructionsFR": {
+                  "type": "string"
+                },
+                "strInstructionsIT": {
+                  "type": "string"
+                },
+                "strInstructionsZH-HANS": {
+                  "type": "string"
+                },
+                "strInstructionsZH-HANT": {
+                  "type": "string"
+                },
+                "strDrinkThumb": {
+                  "type": "string"
+                },
+                "strIngredient1": {
+                  "type": "string"
+                },
+                "strIngredient2": {
+                  "type": "string"
+                },
+                "strIngredient3": {
+                  "type": "string"
+                },
+                "strIngredient4": {
+                  "type": "null|string|string|string|string"
+                },
+                "strIngredient5": {
+                  "type": "null|string|string"
+                },
+                "strIngredient6": {
+                  "type": "null|string|string"
+                },
+                "strIngredient7": {
+                  "type": "null|string"
+                },
+                "strIngredient8": {
+                  "type": "null"
+                },
+                "strIngredient9": {
+                  "type": "null"
+                },
+                "strIngredient10": {
+                  "type": "null"
+                },
+                "strIngredient11": {
+                  "type": "null"
+                },
+                "strIngredient12": {
+                  "type": "null"
+                },
+                "strIngredient13": {
+                  "type": "null"
+                },
+                "strIngredient14": {
+                  "type": "null"
+                },
+                "strIngredient15": {
+                  "type": "null"
+                },
+                "strMeasure1": {
+                  "type": "string"
+                },
+                "strMeasure2": {
+                  "type": "string"
+                },
+                "strMeasure3": {
+                  "type": "string"
+                },
+                "strMeasure4": {
+                  "type": "null|null|string|string|string|string"
+                },
+                "strMeasure5": {
+                  "type": "null|string|string"
+                },
+                "strMeasure6": {
+                  "type": "null|string"
+                },
+                "strMeasure7": {
+                  "type": "null|string"
+                },
+                "strMeasure8": {
+                  "type": "null"
+                },
+                "strMeasure9": {
+                  "type": "null"
+                },
+                "strMeasure10": {
+                  "type": "null"
+                },
+                "strMeasure11": {
+                  "type": "null"
+                },
+                "strMeasure12": {
+                  "type": "null"
+                },
+                "strMeasure13": {
+                  "type": "null"
+                },
+                "strMeasure14": {
+                  "type": "null"
+                },
+                "strMeasure15": {
+                  "type": "null"
+                },
+                "strImageSource": {
+                  "type": "null|null|null|null|null|string"
+                },
+                "strImageAttribution": {
+                  "type": "null|null|null|null|null|string"
+                },
+                "strCreativeCommonsConfirmed": {
+                  "type": "string"
+                },
+                "dateModified": {
+                  "type": "null|string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

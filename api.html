@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API detail — API Time Machine</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>API Time Machine <span class="tick">⏱</span></h1>
+    <nav><a href="index.html">← Dashboard</a><a href="about.html">How it works</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="api-head" id="head"><p>Loading…</p></div>
+  <div id="timeline" class="timeline"></div>
+
+  <h2 style="font-size:1.1rem">Current schema</h2>
+  <details class="schema-box" id="schemaBox">
+    <summary>Show the latest captured schema tree</summary>
+    <div class="schema-tree" id="schemaTree">Loading…</div>
+  </details>
+</main>
+
+<footer>
+  <div class="wrap">Snapshots run daily at 06:00 UTC via GitHub Actions.</div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+(async () => {
+  const id = ATM.getParam('api');
+  const head = document.getElementById('head');
+  const timeline = document.getElementById('timeline');
+  if (!id) {
+    head.innerHTML = '<p>No API selected. <a href="index.html">Back to dashboard</a>.</p>';
+    return;
+  }
+  try {
+    const [index, log, snap] = await Promise.all([
+      ATM.fetchJSON('data/index.json'),
+      ATM.fetchJSON('data/changelog/' + encodeURIComponent(id) + '.json'),
+      ATM.fetchJSON('data/snapshots/' + encodeURIComponent(id) + '.json')
+    ]);
+    const meta = index.apis.find(a => a.id === id);
+    if (!meta) throw new Error('Unknown API id: ' + id);
+    document.title = meta.name + ' — API Time Machine';
+
+    head.innerHTML = `
+      <h1>${ATM.esc(meta.name)}</h1>
+      <p>${ATM.esc(meta.description || '')}</p>
+      <div class="api-stats">
+        <span>Status <strong>${ATM.esc(meta.status)}</strong></span>
+        <span>Total changes <strong>${meta.changeCount}</strong></span>
+        <span>Last change <strong>${meta.lastChange ? ATM.esc(meta.lastChange) : 'none yet'}</strong></span>
+        <span>Last checked <strong>${ATM.fmtDate(meta.lastChecked)}</strong></span>
+      </div>`;
+
+    if (!log.entries.length) {
+      timeline.innerHTML = '<div class="empty">No schema changes detected since tracking began. The timeline will fill in the day an API changes its response shape.</div>';
+    } else {
+      // Group entries by date, newest first.
+      const byDate = {};
+      for (const e of log.entries) {
+        (byDate[e.date] = byDate[e.date] || []).push(e);
+      }
+      timeline.innerHTML = Object.keys(byDate).sort().reverse().map(date => `
+        <div class="day">
+          <h3>${ATM.esc(date)}</h3>
+          ${byDate[date].map(e => e.changes.map(c => ATM.changeRow(c, e.endpoint)).join('')).join('')}
+        </div>`).join('');
+    }
+
+    // Current schema tree (first endpoint, or merged across endpoints).
+    const eps = Object.values(snap.endpoints || {}).filter(e => e.schema);
+    if (eps.length) {
+      document.getElementById('schemaTree').innerHTML =
+        eps.map(e => `<div style="margin-bottom:14px"><strong>${ATM.esc(e.label)}</strong> <span class="mono" style="color:var(--muted)">${ATM.esc(e.url)}</span></div>` +
+          ATM.renderSchemaTree(e.schema)).join('<hr style="border:none;border-top:1px solid var(--border);margin:14px 0">');
+    } else {
+      document.getElementById('schemaTree').textContent = 'No schema captured yet.';
+    }
+  } catch (e) {
+    head.innerHTML = '<p>Could not load data for this API. ' + ATM.esc(e.message) + '</p>';
+  }
+})();
+</script>
+</body>
+</html>

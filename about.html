@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works — API Time Machine</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>API Time Machine <span class="tick">⏱</span></h1>
+    <nav><a href="index.html">Dashboard</a><a href="about.html">How it works</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="prose">
+    <h2>What it is</h2>
+    <p>APIs change silently. A field gets renamed, a type flips from number to string, a nested object disappears — and your integration breaks at 2am. API Time Machine is a public, version-controlled archive of what popular free APIs <em>actually return</em>, snapshotted every day, with a field-level changelog of every structural change.</p>
+
+    <h2>How the pipeline works</h2>
+    <ol>
+      <li><strong>Fetch.</strong> Every day at 06:00 UTC, a GitHub Actions workflow runs <code>node scripts/snapshot.js</code>. It fetches one endpoint per tracked API — sequentially, with a 1-second delay between requests and a 15-second timeout each.</li>
+      <li><strong>Extract.</strong> <code>scripts/schema.js</code> converts each JSON response into a canonical schema tree: objects become field maps, arrays merge the schemas of their elements, primitives become <code>string</code> / <code>number</code> / <code>boolean</code> / <code>null</code>. Key order never affects the result.</li>
+      <li><strong>Diff.</strong> The new schema is hashed and compared with yesterday's. On a mismatch, <code>diffSchemas</code> produces field-level changes — <code>added</code>, <code>removed</code>, <code>type_changed</code> — addressed by dot-paths like <code>license.spdx_id</code> or <code>tags[]</code>.</li>
+      <li><strong>Publish.</strong> Snapshots, changelogs, and the index are committed back to <code>data/</code> as plain JSON. This site reads those files directly — no backend, no database, no cost.</li>
+    </ol>
+    <p>If a fetch fails, the previous snapshot is kept untouched and the API is marked <code>error</code> until the next successful run.</p>
+
+    <h2>APIs currently tracked</h2>
+    <ul>
+      <li><strong>GitHub REST API</strong> — repository metadata for a fixed public repo</li>
+      <li><strong>Open-Meteo</strong> — weather forecast for a fixed location</li>
+      <li><strong>REST Countries</strong> — country data for a fixed country</li>
+      <li><strong>JSONPlaceholder</strong> — a single fake post resource</li>
+      <li><strong>Kraken</strong> — public crypto ticker (XBT/USD)</li>
+      <li><strong>Dog CEO</strong> — the full dog breed list</li>
+      <li><strong>Open Library</strong> — metadata for a fixed work record</li>
+      <li><strong>Agify</strong> — age prediction for a fixed name</li>
+    </ul>
+    <p>All are keyless and free. Endpoints are fixed (not parameterized per run) so day-to-day diffs reflect real API changes, not different inputs.</p>
+
+    <h2>Add your own API</h2>
+    <ol>
+      <li>Add an entry to <code>config/apis.json</code>:
+        <pre>{
+  "id": "my-api",
+  "name": "My API",
+  "description": "What this API does.",
+  "baseUrl": "https://api.example.com",
+  "endpoints": [
+    { "path": "/v1/things", "label": "List things" }
+  ]
+}</pre>
+      </li>
+      <li>Run <code>node scripts/snapshot.js</code> locally to create the seed snapshot.</li>
+      <li>Commit. The next scheduled run picks it up automatically.</li>
+    </ol>
+    <p>Rules: the API must need no key, the endpoint must be stable (same input every day), and responses should be JSON under ~1MB.</p>
+
+    <h2>Local development</h2>
+    <p>No build step, no dependencies. To refresh the data: <code>node scripts/snapshot.js</code> (Node 18+). To preview the site: serve the repo root with any static server, e.g. <code>npx serve .</code> or <code>python3 -m http.server</code>, then open <code>index.html</code>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Snapshots run daily at 06:00 UTC via GitHub Actions.</div>
+</footer>
+</body>
+</html>

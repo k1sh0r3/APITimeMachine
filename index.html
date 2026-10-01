@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API Time Machine — public archive of API schema changes</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>API Time Machine <span class="tick">⏱</span></h1>
+    <p class="tagline">A public archive that snapshots popular free APIs every day and records exactly what changed in their response schemas — and when.</p>
+    <nav><a href="index.html">Dashboard</a><a href="about.html">How it works</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid" id="cards"><p class="updated">Loading…</p></div>
+  <p class="updated" id="generated"></p>
+</main>
+
+<footer>
+  <div class="wrap">Snapshots run daily at 06:00 UTC via GitHub Actions. All APIs tracked are keyless and free.</div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+(async () => {
+  try {
+    const index = await ATM.fetchJSON('data/index.json');
+    const grid = document.getElementById('cards');
+    grid.innerHTML = index.apis.map(a => `
+      <a class="card" href="api.html?api=${encodeURIComponent(a.id)}">
+        <div class="card-top">
+          <span class="dot ${a.status === 'ok' ? 'ok' : 'error'}" title="${ATM.esc(a.status)}"></span>
+          <h2>${ATM.esc(a.name)}</h2>
+        </div>
+        <p>${ATM.esc(a.description || '')}</p>
+        <div class="card-meta">
+          <span>Last change<br><strong>${a.lastChange ? ATM.esc(a.lastChange) : 'none yet'}</strong></span>
+          <span>Changes<br><strong>${a.changeCount}</strong></span>
+          <span>Checked<br><strong>${ATM.fmtDate(a.lastChecked)}</strong></span>
+        </div>
+      </a>`).join('');
+    document.getElementById('generated').textContent =
+      'Index generated ' + new Date(index.generatedAt).toLocaleString();
+  } catch (e) {
+    document.getElementById('cards').innerHTML =
+      '<p class="updated">Could not load snapshot data. ' + ATM.esc(e.message) + '</p>';
+  }
+})();
+</script>
+</body>
+</html>

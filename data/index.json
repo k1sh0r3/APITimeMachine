@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-10-01T17:02:19.338Z",
+  "apis": [
+    {
+      "id": "github",
+      "name": "GitHub REST API",
+      "description": "Repository metadata for a fixed public repo (octocat/Hello-World).",
+      "lastChecked": "2026-10-01T17:02:21.561Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "open-meteo",
+      "name": "Open-Meteo",
+      "description": "Weather forecast for a fixed location (Berlin, DE).",
+      "lastChecked": "2026-10-01T17:02:23.771Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "rest-countries",
+      "name": "REST Countries",
+      "description": "Country data for a fixed country (USA).",
+      "lastChecked": "2026-10-01T17:02:26.141Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "jsonplaceholder",
+      "name": "JSONPlaceholder",
+      "description": "Fake REST API for testing — a single post resource.",
+      "lastChecked": "2026-10-01T17:02:28.166Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "description": "Public crypto market ticker (XBT/USD).",
+      "lastChecked": "2026-10-01T17:02:29.924Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "dog-ceo",
+      "name": "Dog CEO",
+      "description": "Dog breed list and images.",
+      "lastChecked": "2026-10-01T17:02:31.546Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "open-library",
+      "name": "Open Library",
+      "description": "Book/work metadata for a fixed work record.",
+      "lastChecked": "2026-10-01T17:02:33.682Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    },
+    {
+      "id": "agify",
+      "name": "Agify",
+      "description": "Age prediction for a fixed name (michael).",
+      "lastChecked": "2026-10-01T17:02:35.794Z",
+      "lastChange": null,
+      "changeCount": 0,
+      "status": "ok"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// CtrlZ_API — shared client helpers (no dependencies).
+// CtrlZAPI — shared client helpers (no dependencies).
 
 async function fetchJSON(path) {
   const res = await fetch(path);

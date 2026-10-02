@@ -1,14 +1,14 @@
 {
   "id": "open-notify-astros",
   "name": "Open Notify (Astronauts)",
-  "fetchedAt": "2026-10-01T17:29:39.343Z",
+  "fetchedAt": "2026-10-02T12:01:25.149Z",
   "endpoints": {
     "/astros.json": {
       "label": "Astronauts in space",
       "url": "http://api.open-notify.org/astros.json",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-01T17:29:39.343Z",
+      "fetchedAt": "2026-10-02T12:01:25.149Z",
       "hash": "7721c970d02d4428",
       "schema": {
         "type": "object",

@@ -1,14 +1,14 @@
 {
   "id": "zippopotam",
   "name": "Zippopotam",
-  "fetchedAt": "2026-10-01T17:29:19.343Z",
+  "fetchedAt": "2026-10-02T12:00:35.007Z",
   "endpoints": {
     "/us/90210": {
       "label": "Lookup zip code",
       "url": "https://api.zippopotam.us/us/90210",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-01T17:29:19.342Z",
+      "fetchedAt": "2026-10-02T12:00:35.006Z",
       "hash": "6daa581e326150f6",
       "schema": {
         "type": "object",

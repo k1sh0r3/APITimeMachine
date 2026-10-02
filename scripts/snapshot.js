@@ -1,4 +1,4 @@
-// CtrlZ_API — daily snapshot runner.
+// CtrlZAPI — daily snapshot runner.
 // Fetches every configured endpoint, extracts its response schema, diffs
 // against the previous snapshot, and records changes. Zero dependencies,
 // Node 18+ (global fetch).
@@ -38,7 +38,7 @@ async function fetchJSON(url, extraHeaders) {
     const res = await fetch(url, {
       signal: ctrl.signal,
       headers: {
-        'User-Agent': 'ctrlz-api/1.0 (daily schema snapshot; github.com/k1sh0r3/CtrlZ_API)',
+        'User-Agent': 'ctrlz-api/1.0 (daily schema snapshot; github.com/k1sh0r3/CtrlZAPI)',
         'Accept': 'application/json',
         ...(extraHeaders || {})
       }

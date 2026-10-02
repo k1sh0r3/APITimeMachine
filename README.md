@@ -1,6 +1,6 @@
-# CtrlZ_API ⏱
+# CtrlZAPI ⏱
 
-**Live site:** https://k1sh0r3.github.io/CtrlZ_API/
+**Live site:** https://k1sh0r3.github.io/CtrlZAPI/
 
 
 *Ctrl+Z for the API economy — every schema change, archived.*

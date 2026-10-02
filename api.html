@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>API detail — CtrlZ_API</title>
-<link rel="stylesheet" href="assets/style.css">
+<title>API detail — CtrlZAPI</title>
+<link rel="stylesheet" href="assets/style.css?v=2">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <h1>CtrlZ_API <span class="tick">⏱</span></h1>
+    <h1>CtrlZAPI <span class="tick">⏱</span></h1>
     <nav><a href="index.html">← Dashboard</a><a href="about.html">How it works</a></nav>
   </div>
 </header>
@@ -29,7 +29,7 @@
   <div class="wrap">Snapshots run daily at 06:00 UTC via GitHub Actions.</div>
 </footer>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=2"></script>
 <script>
 (async () => {
   const id = ATM.getParam('api');
@@ -47,7 +47,7 @@
     ]);
     const meta = index.apis.find(a => a.id === id);
     if (!meta) throw new Error('Unknown API id: ' + id);
-    document.title = meta.name + ' — CtrlZ_API';
+    document.title = meta.name + ' — CtrlZAPI';
 
     head.innerHTML = `
       <h1>${ATM.esc(meta.name)}</h1>

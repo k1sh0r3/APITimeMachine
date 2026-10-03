@@ -1,14 +1,14 @@
 {
   "id": "coinbase",
   "name": "Coinbase",
-  "fetchedAt": "2026-10-02T12:00:29.361Z",
+  "fetchedAt": "2026-10-03T11:13:37.814Z",
   "endpoints": {
     "/v2/prices/BTC-USD/spot": {
       "label": "Spot price",
       "url": "https://api.coinbase.com/v2/prices/BTC-USD/spot",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-02T12:00:29.361Z",
+      "fetchedAt": "2026-10-03T11:13:37.814Z",
       "hash": "f2b9fab3886d8701",
       "schema": {
         "type": "object",

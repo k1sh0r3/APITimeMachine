@@ -1,4 +1,16 @@
 {
   "id": "remotive",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-10-03",
+      "endpoint": "/api/remote-jobs?limit=1",
+      "changes": [
+        {
+          "op": "type_changed",
+          "path": "jobs[].tags[]",
+          "detail": "string|string|string|string|string|string|string|string|string|string|string|string|string|unknown -> string|string|string|string|string|string|string|string|string|string|string|string|unknown"
+        }
+      ]
+    }
+  ]
 }

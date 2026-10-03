@@ -1,14 +1,14 @@
 {
   "id": "jikan",
   "name": "Jikan (MyAnimeList)",
-  "fetchedAt": "2026-10-02T12:01:26.790Z",
+  "fetchedAt": "2026-10-03T11:14:02.585Z",
   "endpoints": {
     "/v4/anime/1": {
       "label": "Get an anime",
       "url": "https://api.jikan.moe/v4/anime/1",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-02T12:01:26.790Z",
+      "fetchedAt": "2026-10-03T11:14:02.585Z",
       "hash": "26d2d171b76ce318",
       "schema": {
         "type": "object",

@@ -1,14 +1,14 @@
 {
   "id": "stackexchange",
   "name": "Stack Exchange",
-  "fetchedAt": "2026-10-02T12:01:07.348Z",
+  "fetchedAt": "2026-10-03T11:13:57.628Z",
   "endpoints": {
     "/2.3/questions?site=stackoverflow&order=desc&sort=votes&pagesize=1": {
       "label": "Top voted question",
       "url": "https://api.stackexchange.com/2.3/questions?site=stackoverflow&order=desc&sort=votes&pagesize=1",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-02T12:01:07.348Z",
+      "fetchedAt": "2026-10-03T11:13:57.628Z",
       "hash": "3cd06e85557d9f37",
       "schema": {
         "type": "object",

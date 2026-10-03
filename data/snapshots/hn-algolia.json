@@ -1,14 +1,14 @@
 {
   "id": "hn-algolia",
   "name": "HN Algolia API",
-  "fetchedAt": "2026-10-02T12:01:06.256Z",
+  "fetchedAt": "2026-10-03T11:13:56.533Z",
   "endpoints": {
     "/api/v1/items/8863": {
       "label": "Get an item",
       "url": "https://hn.algolia.com/api/v1/items/8863",
       "status": "ok",
       "httpStatus": 200,
-      "fetchedAt": "2026-10-02T12:01:06.256Z",
+      "fetchedAt": "2026-10-03T11:13:56.533Z",
       "hash": "f51c10d1e81377a0",
       "schema": {
         "type": "object",
